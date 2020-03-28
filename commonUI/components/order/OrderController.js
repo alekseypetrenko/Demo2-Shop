@@ -8,8 +8,8 @@ export class OrderController {
 
         this.notify = notify;
         this.subscribe = subscribe;
-        this.subscribe('order', this.showModal);//subcribe for event from CartController and get cart info (products + totalPrice)
-
+        this.subscribe('cart-info', this.showModal);
+        this.subscribe('cart-info', this.handleCartInfo);//subcribe for event from CartController and get cart info (products + totalPrice)
     }
 
     showModal = (el) => {
@@ -25,20 +25,24 @@ export class OrderController {
         this.model.validate(data);
     }
 
-    handleOrderInfo = () => {
+    handleOrderInfo = () => {//save order info into localStorage
+        this.closeModal();
         const data = {
             name: this.view.inputsValue[0].value,
             email: this.view.inputsValue[1].value,
             phone: this.view.inputsValue[2].value,
-            products: this.items,
-            totalPrice: this.totalPrice
+            products: this.cartInfo.products,
+            totalPrice: this.cartInfo.totalPrice
         }
         this.model.saveOrder(data);
-        this.notify('orderInfo', this.model.order);
+        this.notify('clear-cart', null);//notify CartController about changes
     }
 
-    handleCartInfo = ({ data, totalPrice }) => {
-        this.items = data;
-        this.totalPrice = totalPrice;
+    handleCartInfo = (cart) => {
+        this.cartInfo = cart;
+    }
+
+    clearCartInfo = (cart) => {
+        this.cleenCart = cart;
     }
 }

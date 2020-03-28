@@ -8,27 +8,26 @@ export class OrderView {
         this.inputEmail = document.querySelector(".inp-order-email");
         this.inputPhone = document.querySelector(".inp-order-phone");
 
-        this.submitBtn.addEventListener("click", addEventListener("click", ev => {
-            ev.preventDefault();
-            listenerHandleOrder;
-        }));
         this.showListener = showListener;
         this.closeListener = closeListener;
+        this.submitBtn.addEventListener("click", ev => {
+            ev.preventDefault();
+            listenerHandleOrder();
+        });
 
         this.inputName.addEventListener("input", listenerInput);
         this.inputEmail.addEventListener("input", listenerInput);
         this.inputPhone.addEventListener("input", listenerInput);
-
-
     }
 
     show() {
-        $(this.modalOrder).modal('show');
+        $(this.modalOrder).modal('show');//bootstrap4 documentation show modal
     }
 
     close() {
         this.modalTitleOrder.innerHTML = "";
         this.modalBodyOrder.innerHTML = "";
+        $(this.modalOrder).modal('hide');//bootstrap4 documentation close modal
     }
 
     get inputsValue() {
