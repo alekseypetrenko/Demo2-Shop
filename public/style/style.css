@@ -1,0 +1,140 @@
+.row {
+    margin-top: 30px;
+    margin-left: 60px;
+    margin-right: 0;
+}
+
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+} 
+
+.card {
+    border: 2px solid #04B45F;
+}
+
+.btn-outline-secondary,
+.btn-outline-success {
+    width: 48%;
+    padding: 10px 0;
+    text-align: center;
+    display: inline-block;
+}
+
+.btn-outline-info {
+    margin-left: 0;
+}
+
+.link-species {
+    font-weight: bold;
+}
+
+#all-animals {
+    color: #04B45F;
+    font-weight: bold;
+}
+
+#navbarDropdown {
+    color: white;
+    font-weight: normal;
+}
+
+.navbar-nav .nav-link:active,
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link:focus-within {
+    background-color: #04B45F;
+    color: black;
+    font-style: italic;   
+}
+
+.navbar {
+    padding: 15px 30px;
+}
+
+/* pagination */
+.page-link {
+    border-color: gray;
+    color: gray;
+    transform: scale(0.8); 
+    margin-top: 30px;
+}
+
+.page-link:hover {
+    transform: scale(1.1);
+    color: black;
+}
+
+/* Style for basket  */
+.cart:hover {
+    cursor: pointer;
+}
+
+.cart-icon {
+    color: white;
+    font-size: 33px;
+}
+
+.cart-container {
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.cart-container:hover { 
+    transform: scale(1.15);
+}
+
+.cart-counter {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:#04B45F;
+    text-align:center;
+    border-radius:50%;
+    
+}
+
+.list-main-render:first-of-type {
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+
+.list-main-render-item:nth-of-type(2),
+.list-main-render:nth-of-type(3) {
+    color: gray;
+}
+
+.card:hover {
+    transform: scale(1.05);   
+    box-shadow: 10px 10px 5px gray;
+}
+
+.list-detail-render{
+    color: gray;
+    text-align: center;
+}
+
+.list-detail-render span {
+    font-weight: bold;
+    color: black;
+}
+
+/* order validation */
+.valid {
+    border-color: #36cc36;
+}
+.invalid {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(241, 20, 4, 0.25);
+}
+
+.modal-dialog {
+    width: 100% !important;
+}
