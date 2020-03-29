@@ -1,5 +1,5 @@
 export class AnimalModel {
-    link = "http://localhost:3000/animals/2";
+    link = "http://localhost:3000/animals/";
     animals = [];
     currentAnimals = [];
     currentFiltered;// for filter func receives id from controller

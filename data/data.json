@@ -3,7 +3,7 @@
     "id": 1,
     "species": "cat",
     "name": "Max",
-    "image": "images/animal_id_2.jpg",
+    "image": "images/animal_id_1.jpg",
     "price": 51.24,
     "gender": "male",
     "weight": 8.25,
