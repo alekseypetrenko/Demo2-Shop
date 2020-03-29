@@ -12,7 +12,7 @@ const AnimalModel = Animal.init({
     price: { allowNull: false, type: DataTypes.DECIMAL },
     gender: { type: DataTypes.STRING },
     weight: { type: DataTypes.DECIMAL },
-    birth_date: { allowNull: false, type: DataTypes.DATEONLY },
+    birth_date: { allowNull: false, type: DataTypes.BIGINT },
     color: { allowNull: false, type: DataTypes.STRING },
     breed: { allowNull: false, type: DataTypes.STRING },
     is_sterile: { allowNull: false, type: DataTypes.BOOLEAN },

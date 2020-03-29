@@ -5,6 +5,9 @@ const sequelize = new Sequelize(db.name, db.user, db.password, {
 	host: db.host,
 	port: db.port,
 	dialect: db.dialect,
+	dialectOptions: {
+		supportBigNumbers: true
+	}
 });
 
 sequelize.authenticate()

@@ -68,6 +68,11 @@ img.center {
     color: black;
 }
 
+li.page-item {
+    width: 8%;
+    text-align: center;
+}
+
 /* Style for basket  */
 .cart:hover {
     cursor: pointer;

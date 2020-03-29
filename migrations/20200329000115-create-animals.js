@@ -33,7 +33,7 @@ module.exports = {
                 },
                 birth_date: {
                     allowNull: false,
-                    type: Sequelize.DATEONLY
+                    type: Sequelize.BIGINT
                 },
                 color: {
                     allowNull: false,
