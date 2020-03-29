@@ -2,7 +2,7 @@ const express = require('express');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
-const sequelize = require("./db");
+const sequelize = require("./db");//require("./db")
 
 const app = express();
 
