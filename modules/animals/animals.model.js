@@ -15,8 +15,8 @@ const AnimalModel = Animal.init({
     birth_date: { allowNull: false, type: DataTypes.BIGINT },
     color: { allowNull: false, type: DataTypes.STRING },
     breed: { allowNull: false, type: DataTypes.STRING },
-    is_sterile: { allowNull: false, type: DataTypes.BOOLEAN },
-    hair: { allowNull: false, type: DataTypes.STRING },
+    is_sterile: { type: DataTypes.BOOLEAN },
+    hair: { type: DataTypes.STRING },
     createdAt: { allowNull: false, type: DataTypes.DATE },
     updatedAt: { allowNull: false, type: DataTypes.DATE }
 }, { sequelize })
