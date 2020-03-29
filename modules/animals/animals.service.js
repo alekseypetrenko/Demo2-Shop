@@ -1,4 +1,5 @@
 const animalModel = require("./animals.model");
+const { NotFound } = require('../../common/exeptions/index');
 
 class AnimalService {
     async findMany(){
@@ -9,7 +10,7 @@ class AnimalService {
         const animal = await animalModel.findOne({ where: { id } });
 
         if (!animal) {
-            throw new Error('animal not found');
+            throw new NotFound('Animal is not found');
         }
 
         return animal;
