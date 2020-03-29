@@ -1,5 +1,6 @@
-const { Model, DataTypes } = require("sequelize");
+const { DataTypes, Model } = require('sequelize');
 const sequelize = require("../../db");
+
 
 class Animal extends Model { };
 
@@ -9,8 +10,8 @@ const AnimalModel = Animal.init({
     name: { type: DataTypes.STRING },
     image: { type: DataTypes.STRING },
     price: { allowNull: false, type: DataTypes.DECIMAL },
-    gender: { allowNull: false, type: DataTypes.STRING },
-    weight: { allowNull: false, type: DataTypes.DECIMAL },
+    gender: { type: DataTypes.STRING },
+    weight: { type: DataTypes.DECIMAL },
     birth_date: { allowNull: false, type: DataTypes.DATEONLY },
     color: { allowNull: false, type: DataTypes.STRING },
     breed: { allowNull: false, type: DataTypes.STRING },
@@ -18,6 +19,6 @@ const AnimalModel = Animal.init({
     hair: { allowNull: false, type: DataTypes.STRING },
     createdAt: { allowNull: false, type: DataTypes.DATE },
     updatedAt: { allowNull: false, type: DataTypes.DATE }
-})
+}, { sequelize })
 
 module.exports = AnimalModel;

@@ -1,30 +1,22 @@
 const express = require('express');
-const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
 const path = require('path');
-const sequelize = require("./db");//require("./db")
+const sequelize = require("./db");
 
 const app = express();
 
 app.use(bodyParser.json());
 
 
-app.get("/", (req, res) => {
-	res.sendfile(path.join(__dirname, "public", "index.html"));
-	//res.send("index")
-})
-
+app.use("/", express.static(path.join("public")));
 
 // Routes for /animals
-//app.use("/animals", require("./routes/animals"));
+app.use("/animals", require("./modules/animals/animals.routes"));
 
 
-// Set static folder
-app.use(express.static(path.join("public")));
 
 
 sequelize.sync({ alter: true });
-
 
 // Start local server
 const PORT = process.env.PORT || 3000

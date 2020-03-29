@@ -23,13 +23,13 @@ module.exports = {
                 },
                 price: {
                     allowNull: false,
-                    type: Sequelize.INTEGER
+                    type: Sequelize.DECIMAL
                 },
                 gender: {
                     type: Sequelize.STRING
                 },
                 weight: {
-                    type: Sequelize.INTEGER
+                    type: Sequelize.DECIMAL
                 },
                 birth_date: {
                     allowNull: false,
