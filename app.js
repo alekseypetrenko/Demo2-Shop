@@ -10,8 +10,8 @@ app.use(bodyParser.json());
 
 
 app.get("/", (req, res) => {
-    res.sendfile(path.join(__dirname, "public", "index.html"));
-    //res.send("index")
+	res.sendfile(path.join(__dirname, "public", "index.html"));
+	//res.send("index")
 })
 
 
@@ -29,6 +29,6 @@ sequelize.sync({ alter: true });
 // Start local server
 const PORT = process.env.PORT || 3000
 app.listen(PORT, () => {
-    console.log(`Server is started on portn ${PORT}...`);
+	console.log(`Server is started on portn ${PORT}...`);
 
 })
