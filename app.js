@@ -16,7 +16,7 @@ app.get("/", (req, res) => {
 
 
 // Routes for /animals
-app.use("/animals", require("./routes/animals"));
+//app.use("/animals", require("./routes/animals"));
 
 
 // Set static folder
