@@ -1,13 +1,9 @@
 const { Router } = require("express");
+const { pagination } = require("./pagination.controller");
 
-const pagination = new Router();
+const router = new Router();
 
-pagination.get("/", (req, res, next) => {
-    res.send("next");
-})
+router.get("/", pagination.pagination)
 
-pagination.get("/", (req, res, next) => {
-    res.send("prev");
-})
 
-module.exports = pagination;
+module.exports = router;

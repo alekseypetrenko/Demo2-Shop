@@ -15,6 +15,10 @@ class AnimalService {
 
         return animal;
     }
+
+    async paginatedPage(page, limit){
+        return animalModel.findAll({offset: page, limit});
+    }
 }
 
 const animalService = new AnimalService();
