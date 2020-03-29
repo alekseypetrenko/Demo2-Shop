@@ -14,8 +14,10 @@ const OrderItemModel = OrderItem.init({
 
 //create column animalId in OrderItem table (constraint: not null) and connect it with id column in Animal table
 OrderItemModel.animal = OrderItemModel.belongsTo(AnimalModel, { foreignKeyConstraint: true, foreignKey: 'animalId', targetKey: 'id'});
+AnimalModel.animals = AnimalModel.hasMany(OrderItemModal);
 
 //create column orderId in OrderItem table (constraint: not null) and connect it with id column in Order table
 OrderItemModel.order = OrderItemModel.belongsTo(OrderModel, { foreignKeyConstraint: true, foreignKey: 'orderId', targetKey: 'id'});
+OrderModel.items = OrderModel.hasMany(OrderItemModal);
 
 module.exports = OrderItemModel;

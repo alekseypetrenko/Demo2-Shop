@@ -3,7 +3,7 @@ const sequelize = require("../../db");
 
 class Animal extends Model { };
 
-const AnimalModel = Anmal.init({
+const AnimalModel = Animal.init({
     id: { primaryKey: true, allowNull: false, autoIncrement: true, type: DataTypes.INTEGER },
     species: { allowNull: false, type: DataTypes.STRING },
     name: { type: DataTypes.STRING },

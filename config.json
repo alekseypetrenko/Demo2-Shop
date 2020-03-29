@@ -2,7 +2,7 @@
     "db": {
       "name": "animals",
       "user": "postgres",
-      "password": "admin71090",
+      "password": "postgres",
       "host": "127.0.0.1",
       "port": 5432,
       "dialect": "postgres"
