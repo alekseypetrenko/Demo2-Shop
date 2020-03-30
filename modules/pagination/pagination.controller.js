@@ -1,5 +1,5 @@
-const animalModel = require("../animals/animals.model");
-const animalService = require("../animals/animals.service");
+const animalsModel = require("../animals/animals.model");
+const animalsService = require("../animals/animals.service");
 
 class Paginator {
 
@@ -14,7 +14,7 @@ class Paginator {
             //console.log(req.query);
             
 
-            const results = await animalService.paginatedPage(page, limit);
+            const results = await animalsService.paginatedPage(page, limit);
             console.log(results);
             
 

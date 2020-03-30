@@ -4,7 +4,7 @@ const sequelize = require("../../db");
 
 class Animal extends Model { };
 
-const AnimalModel = Animal.init({
+const AnimalsModel = Animal.init({
     id: { primaryKey: true, allowNull: false, autoIncrement: true, type: DataTypes.INTEGER },
     species: { allowNull: false, type: DataTypes.STRING },
     name: { type: DataTypes.STRING },
@@ -21,4 +21,4 @@ const AnimalModel = Animal.init({
     updatedAt: { allowNull: false, type: DataTypes.DATE }
 }, { sequelize })
 
-module.exports = AnimalModel;
+module.exports = AnimalsModel;

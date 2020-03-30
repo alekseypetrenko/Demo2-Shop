@@ -1,19 +1,18 @@
-const orderService = require("./orders.service");
+const ordersService = require("./orders.service");
 
 
-class orderController {
+class OrdersController {
 
-    async createOne(req, res, next){
+    async createOne(req, res, next) {
         try {
-            const order = await orderService.createOne();
-            res.json(order);
+            const order = await ordersService.createOne(req.body);
+            res.send(order);
         } catch (e) {
             next(e);
         }
     }
 
-       
 }
 
-const orderController = new orderController();
-module.exports = orderController;
+const ordersController = new OrdersController();
+module.exports = ordersController;

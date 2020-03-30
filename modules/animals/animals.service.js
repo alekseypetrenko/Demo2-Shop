@@ -1,13 +1,13 @@
-const animalModel = require("./animals.model");
+const animalsModel = require("./animals.model");
 const { NotFound } = require('../../common/exeptions/index');
 
-class AnimalService {
+class AnimalsService {
     async findMany(){
-        return animalModel.findAll();
+        return animalsModel.findAll();
     }
 
     async findOneById(id) {
-        const animal = await animalModel.findOne({ where: { id } });
+        const animal = await animalsModel.findOne({ where: { id } });
 
         if (!animal) {
             throw new NotFound('Animal is not found');
@@ -17,9 +17,9 @@ class AnimalService {
     }
 
     async paginatedPage(page, limit){
-        return animalModel.findAll({offset: page, limit});
+        return animalsModel.findAll({offset: page, limit});
     }
 }
 
-const animalService = new AnimalService();
-module.exports = animalService;
+const animalsService = new AnimalsService();
+module.exports = animalsService;

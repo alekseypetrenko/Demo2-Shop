@@ -1,6 +1,6 @@
 const animalsService = require("./animals.service.js")
 
-class AnimalController {
+class AnimalsController {
     async findMany(req, res, next){
         try {
             const animals = await animalsService.findMany();
@@ -23,5 +23,5 @@ class AnimalController {
     
 }
 
-const animalController = new AnimalController();
-module.exports = animalController;
+const animalsController = new AnimalsController();
+module.exports = animalsController;

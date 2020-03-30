@@ -1,10 +1,10 @@
 const { Router } = require("express");
-const animalController = require("./animals.controller");
+const animalsController = require("./animals.controller");
 
-const animalRouter = new Router();
+const animalsRouter = new Router();
 
-animalRouter.get("/", animalController.findMany);
+animalsRouter.get("/", animalsController.findMany);
 
-animalRouter.get("/:id", animalController.findOneById);
+animalsRouter.get("/:id", animalsController.findOneById);
 
-module.exports = animalRouter;
+module.exports = animalsRouter;
