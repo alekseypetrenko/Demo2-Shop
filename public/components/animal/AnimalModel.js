@@ -110,6 +110,13 @@ export class AnimalModel {
         return this.currentAnimals.slice(from, to);
     }
 
+    // async testPagination() {
+    //     const data = await fetch(`http://localhost:3000/page/2`);
+    //     const json = await data.json();
+    //     console.log(json);       
+    //     return json;
+    // }
+
     getAnimalId(id) {// for "Details" and "Add to cart" btn
         return this.currentAnimals.find(el => el.id === +id);
     }

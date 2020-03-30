@@ -44,7 +44,6 @@ module.exports = {
                     type: Sequelize.STRING
                 },
                 is_sterile: {
-                    allowNull: false,
                     type: Sequelize.BOOLEAN
                 },
                 hair: {

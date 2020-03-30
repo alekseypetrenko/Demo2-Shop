@@ -2,7 +2,7 @@ const animalsModel = require("./animals.model");
 const { NotFound } = require('../../common/exeptions/index');
 
 class AnimalsService {
-    async findMany(){
+    async findMany() {
         return animalsModel.findAll();
     }
 
@@ -16,8 +16,22 @@ class AnimalsService {
         return animal;
     }
 
-    async paginatedPage(page, limit){
-        return animalsModel.findAll({offset: page, limit});
+    async paginatedPage(offset, limit) {
+        return animalsModel.findAll({ offset, limit });
+    }
+
+    async searchAndFilter(offset, limit, search, filter){
+        return animalsModel.findAndCountAll({
+            where: {
+                //breed: search || "",
+                species: filter || ""
+            },
+            offset,
+            limit,
+            //order: [`"${sort.name}", "${sort.direction}"`]
+            //order: [['price', 'DESC']]
+
+        })
     }
 }
 
