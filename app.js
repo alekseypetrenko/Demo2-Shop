@@ -13,7 +13,6 @@ app.use("/", express.static(path.join("public")));
 // Routes for /animals
 app.use("/animals", require("./modules/animals/animals.routes"));
 
-
 // Test pagination
 app.use("/next", require("./modules/pagination/pagination.router"));
 app.use("/prev", require("./modules/pagination/pagination.router"));

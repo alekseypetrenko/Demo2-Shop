@@ -19,5 +19,6 @@ AnimalModel.animals = AnimalModel.hasMany(OrderItemModal);
 //create column orderId in OrderItem table (constraint: not null) and connect it with id column in Order table
 OrderItemModel.order = OrderItemModel.belongsTo(OrderModel, { foreignKeyConstraint: true, foreignKey: 'orderId', targetKey: 'id'});
 OrderModel.items = OrderModel.hasMany(OrderItemModal);
+//??hasOne
 
 module.exports = OrderItemModel;

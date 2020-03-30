@@ -16,6 +16,7 @@ class OrderService {
 
     async createOne(orderData) {
         return sequelize.transaction ( async transaction  => {
+            //check animal existence
             const { items } = orderData;
             const foundPetIds = await AnimalModel.findAll({ 
                 where: { id: { [Op.in]: items.map(el => el.animalId) }},
@@ -35,7 +36,7 @@ class OrderService {
                 throw new Error(`Invalid animalIds are [${invalidIds.join(',')}]`);
 
             }
-            //check animal existence
+
             //create Order
             //create orderItems
             //delete animal from bd
