@@ -47,7 +47,6 @@ module.exports = {
                     type: Sequelize.BOOLEAN
                 },
                 hair: {
-                    allowNull: false,
                     type: Sequelize.STRING
                 },
                 createdAt: {
