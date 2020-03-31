@@ -44,18 +44,12 @@ module.exports = {
                     type: Sequelize.STRING
                 },
                 is_sterile: {
+                    allowNull: true,
                     type: Sequelize.BOOLEAN
                 },
                 hair: {
+                    allowNull: true,
                     type: Sequelize.STRING
-                },
-                createdAt: {
-                    allowNull: false,
-                    type: Sequelize.DATE
-                },
-                updatedAt: {
-                    allowNull: false,
-                    type: Sequelize.DATE
                 }
             })
             transaction.commit();

@@ -17,8 +17,6 @@ const AnimalsModel = Animal.init({
     breed: { allowNull: false, type: DataTypes.STRING },
     is_sterile: { type: DataTypes.BOOLEAN },
     hair: { type: DataTypes.STRING },
-    createdAt: { allowNull: false, type: DataTypes.DATE },
-    updatedAt: { allowNull: false, type: DataTypes.DATE }
-}, { sequelize })
+}, { sequelize, createdAt: false, updatedAt: false })
 
 module.exports = AnimalsModel;

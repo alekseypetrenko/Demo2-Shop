@@ -1,95 +1,57 @@
 const sequelize = require('../../db');
 const { Op } = require('sequelize');
-const OrderModel = require('./orders.model');
-const OrderItemModel = require('./order.item.model');
-const AnimalService = require('../animals/animals.service');
-const CustomersService = require('../customers/customer.service');
+const OrdersModel = require('./orders.model');
+const OrdersItemModel = require('./order.item.model');
+const AnimalsModel = require('../animals/animals.model');
+const CustomersModel = require('../customers/customer.model');
+const animalsService = require('../animals/animals.service');
+const customersService = require('../customers/customer.service');
 
 
-class OrderService {
+class OrdersService {
+
+    findMany() {
+        return OrdersModel.findAll({
+            include: [
+                { model: CustomersModel, as: 'customer', attributes: ['name'] },
+                { model: OrdersItemModel, as: 'items', include: [AnimalsModel] }],
+            attributes: ['postedDate']
+        });
+    }
 
     async createOne(orderData) {
         return sequelize.transaction ( async transaction  => {
-            //check animal existence
+            console.log(orderData);
             const { items } = orderData;
-            const foundPetIds = await AnimalModel.findAll({ 
-                where: { id: { [Op.in]: items.map(el => el.animalId) }},
+            const foundAnimals = await animalsService.findMany({
+                where: { id: { [Op.in]: items.map(i => i.animalId) } },
                 attributes: ['id'],
                 transaction,
-            
             });
-
-            if (foundPetIds.length != items.length) {
+            if (foundAnimals.length !== items.length) {
                 const invalidIds = [];
-                items.forEach( el => {
-                    if (!foundPetIds.find(el => el.id === id)) {
-                        invalidIds.push(el)
+                items.forEach(i => {
+                    if (!foundAnimals.find(fa => fa.id === i)) {
+                        invalidIds.push(i);
                     }
                 });
-
-                throw new Error(`Invalid animalIds are [${invalidIds.join(',')}]`);
-
+                throw new Error(`Invalid animal ids are [${invalidIds.join(',')}]`);
             }
 
-            //create Order
-            //create orderItems
-            //delete animal from bd
-            //return order
-
-            const order = new OrderModel();
-
+            const order = new OrdersModel();
+            order.postedDate = new Date();
+            const savedOrder = await order.save({ transaction });
+            orderData.customer.orderId = savedOrder.id;
+            await customersService.createOne(orderData.customer, transaction);
+            const orderItems = items.map(item => ({ orderId: savedOrder.id, animalId: item.animalId }));//
+            const savedOrderItems = await OrdersItemModel.bulkCreate(orderItems, { transaction });
+            await Promise.all(items.map(item => animalsService.markAnimalAsSold(item.animalId, transaction)));
+            order.items = savedOrderItems;
+            return order;
         })
     }
 }
 
+module.exports = new OrdersService();
 
 
-// const { Op } = require('sequelize');
-// const OrderModel = require('./orders.model');
-// const OrderItemModel = require('./order-item.model');
-// const sequelize = require('../../db');
-// const customersService = require('../customers/customers.service');
-// const petsService = require('../pets/pets.service');
-
-// class OrdersService {
-//     async createOne(orderData) {
-//         return sequelize.transaction(async transaction => {
-//             const { items } = orderData;
-//             const foundPets = await petsService.findAll({
-//                 where: { id: { [Op.in]: items.map(i => i.petId) } },
-//                 attributes: ['id', 'quantity'],
-//                 transaction,
-//             });
-//             if (foundPets.length !== items.length) {
-//                 const invalidIds = [];
-//                 items.forEach(i => {
-//                     if (!foundPets.find(fp => fp.id === i)) {
-//                         invalidIds.push(i);
-//                     }
-//                 });
-//                 throw new Error(`Invalid pet ids are [${invalidIds.join(',')}]`);
-//             }
-
-//             items.forEach(pet => {
-//                const foundPet = foundPets.find(p => p.id === pet.id);
-//                if (foundPet.quantity < pet.quantity) {
-//                    throw new Error(`You cannot buy more pets than it is available for id ${pet.id}`);
-//                }
-//             });
-//             const order = new OrderModel();
-//             order.postedDate = new Date();
-//             order.customer = await customersService.createOne(orderData.customer, transaction);
-//             const savedOrder = await order.save({ transaction });
-//             const orderItems = items.map(
-//                 item => new OrderItemModel({ orderId: savedOrder.id, petId: item.petId, quantity: item.quantity })
-//             );
-//             const savedOrderItems = await OrderItemModel.bulkCreate(orderItems, { transaction });
-//             await Promise.all(items.map(item => petsService.subtractQuantity(item.petId, item.quantity, transaction)));
-//             order.items = savedOrderItems;
-//             return order;
-//         });
-//     }
-
-// }
-
-// module.exports = new OrdersService();

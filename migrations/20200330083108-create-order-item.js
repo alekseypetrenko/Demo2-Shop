@@ -4,33 +4,28 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     const transaction = await queryInterface.sequelize.transaction();
     try {
-        await queryInterface.createTable("OrderItems", {
-            id: {
-                primaryKey: true,
-                allowNull: false,
-                autoIncrement: true,
-                type: Sequelize.INTEGER
-            },
-
-            idAnumal: {
-                allowNull: false,
-                type: Sequelize.INTEGER
-            },
-
-            idOrder: {
-                allowNull: false,
-                type: Sequelize.INTEGER
-            },
-
-            createdAt: {
-                allowNull: false,
-                type: Sequelize.DATE
-            },
-            updatedAt: {
-                allowNull: false,
-                type: Sequelize.DATE
-            }
-    })
+        await queryInterface.createTable("OrdersItems", {
+            animalId: {
+                type: Sequelize.INTEGER,
+                references: {
+                  model: {
+                    tableName: 'Animals',
+                    key: 'id',
+                  },
+                },
+                allowNull: false
+              },
+              orderId: {
+                type: Sequelize.INTEGER,
+                references: {
+                  model: {
+                    tableName: 'Orders',
+                    key: 'id',
+                  },
+                },
+                allowNull: false
+              },
+        })
         transaction.commit();
     } catch (error) {
         transaction.rollback();
@@ -40,7 +35,7 @@ module.exports = {
   down: async (queryInterface, Sequelize) => {
       const transaction = await queryInterface.sequelize.transaction();
       try {
-          await queryInterface.dropTable("OrderItems");
+          await queryInterface.dropTable("OrdersItems");
       } catch (error) {
           transaction.rollback();
       }

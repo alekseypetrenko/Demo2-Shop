@@ -11,9 +11,7 @@
     "color": "blenheim,black,ruby",
     "breed": "Cavalier king kharles spaniel",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 2,
@@ -27,9 +25,7 @@
     "color": "golden",
     "breed": "Golden retrieverel",
     "is_sterile": false,
-    "hair": "long-coated",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long-coated"
   },
   {
     "id": 3,
@@ -43,9 +39,7 @@
     "color": "tricolor",
     "breed": "Beagle",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 4,
@@ -59,9 +53,7 @@
     "color": "white",
     "breed": "Bichon frise",
     "is_sterile": false,
-    "hair": "curly",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "curly"
   },
   {
     "id": 5,
@@ -75,9 +67,7 @@
     "color": "brown",
     "breed": "Irish setter",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 6,
@@ -91,9 +81,7 @@
     "color": "white",
     "breed": "West highland white terrier",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 7,
@@ -107,9 +95,7 @@
     "color": "golden,black",
     "breed": "Yorkshire terrier",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 8,
@@ -123,9 +109,7 @@
     "color": "white,goldenblack",
     "breed": "Collie",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 9,
@@ -139,9 +123,7 @@
     "color": "golden,white",
     "breed": "Shiba inu",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 10,
@@ -155,9 +137,7 @@
     "color": "black,brown",
     "breed": "Chow chow",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 11,
@@ -170,9 +150,7 @@
     "color": "orange",
     "breed": "Bengal cat",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 12,
@@ -185,9 +163,7 @@
     "color": "gray",
     "breed": "Siamese cat",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 13,
@@ -200,9 +176,7 @@
     "color": "gray",
     "breed": "British shorthair",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 14,
@@ -215,9 +189,7 @@
     "color": "gray",
     "breed": "Maine coon",
     "is_sterile": true,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 15,
@@ -230,9 +202,7 @@
     "color": "black",
     "breed": "Siberian husky",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 16,
@@ -245,9 +215,7 @@
     "color": "black",
     "breed": "Yorkshire terrier",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 17,
@@ -260,9 +228,7 @@
     "color": "black",
     "breed": "Dobermann",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 18,
@@ -275,9 +241,7 @@
     "color": "cream",
     "breed": "Pug",
     "is_sterile": true,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 19,
@@ -290,9 +254,7 @@
     "color": "ginger",
     "breed": "Procyon lotor",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 20,
@@ -305,9 +267,7 @@
     "color": "black",
     "breed": "Raccoon dog",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 21,
@@ -320,9 +280,7 @@
     "color": "gray",
     "breed": "British shorthair",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 22,
@@ -335,9 +293,7 @@
     "color": "black",
     "breed": "Beagle",
     "is_sterile": true,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 23,
@@ -350,9 +306,7 @@
     "color": "white",
     "breed": "Chow chow",
     "is_sterile": true,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 24,
@@ -365,9 +319,7 @@
     "color": "yellow",
     "breed": "Budgerigar",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 25,
@@ -380,9 +332,7 @@
     "color": "gold",
     "breed": "Gold fish",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 26,
@@ -395,9 +345,7 @@
     "color": "white",
     "breed": "Scottish terrier",
     "is_sterile": true,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 27,
@@ -410,9 +358,7 @@
     "color": "gray",
     "breed": "British cat",
     "is_sterile": true,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 28,
@@ -425,9 +371,7 @@
     "color": "green",
     "breed": "Psittacus erithacus",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 29,
@@ -440,9 +384,7 @@
     "color": "gray",
     "breed": "African elephant",
     "is_sterile": true,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 30,
@@ -455,9 +397,7 @@
     "color": "pink",
     "breed": "Mouse",
     "is_sterile": true,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 31,
@@ -468,9 +408,7 @@
     "weight": 0.2,
     "birth_date": 1582222400000,
     "color": "gray-white",
-    "breed": "Hypancistrus",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Hypancistrus"
   },
   {
     "id": 32,
@@ -481,9 +419,7 @@
     "weight": 0.3,
     "birth_date": 1584222400000,
     "color": "black-red",
-    "breed": "Panaqolus",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Panaqolus"
   },
   {
     "id": 33,
@@ -494,9 +430,7 @@
     "weight": 0.03,
     "birth_date": 1583022400000,
     "color": "blue",
-    "breed": "Microrasbora erythromicron",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Microrasbora erythromicron"
   },
   {
     "id": 34,
@@ -507,9 +441,7 @@
     "weight": 0.02,
     "birth_date": 1581022400000,
     "color": "yellow",
-    "breed": "Trigonostigma heteromorpha",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Trigonostigma heteromorpha"
   },
   {
     "id": 35,
@@ -520,9 +452,7 @@
     "weight": 0.02,
     "birth_date": 1583222400000,
     "color": "blue-yellow",
-    "breed": "Melanotaenia boesemani",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Melanotaenia boesemani"
   },
   {
     "id": 36,
@@ -533,9 +463,7 @@
     "weight": 0.02,
     "birth_date": 1578543600000,
     "color": "yellow",
-    "breed": "Pseudomugil furcatus",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Pseudomugil furcatus"
   },
   {
     "id": 37,
@@ -546,9 +474,7 @@
     "weight": 0.01,
     "birth_date": 1554843600000,
     "color": "white",
-    "breed": "Pterophyllum scalare",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Pterophyllum scalare"
   },
   {
     "id": 38,
@@ -559,9 +485,7 @@
     "weight": 0.03,
     "birth_date": 1579543600000,
     "color": "blue",
-    "breed": "Aequidens rivulatus",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Aequidens rivulatus"
   },
   {
     "id": 39,
@@ -572,9 +496,7 @@
     "weight": 0.04,
     "birth_date": 1582843600000,
     "color": "red-black",
-    "breed": "Astronotus ocellatus",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Astronotus ocellatus"
   },
   {
     "id": 40,
@@ -585,9 +507,7 @@
     "weight": 0.02,
     "birth_date": 1556843600000,
     "color": "red",
-    "breed": "Hemichromis bimaculatus",
-   "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "breed": "Hemichromis bimaculatus"
   },
   {
     "id": 41,
@@ -600,9 +520,7 @@
     "color": "black",
     "breed": "Doberman",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 42,
@@ -615,9 +533,7 @@
     "color": "golden",
     "breed": "Golden retriever",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 43,
@@ -630,9 +546,7 @@
     "color": "black",
     "breed": "Berner Sennenhund",
     "is_sterile": false,
-    "hair": "lonk",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "lonk"
   },
   {
     "id": 44,
@@ -645,9 +559,7 @@
     "color": "brown",
     "breed": "Beagle",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 45,
@@ -660,9 +572,7 @@
     "color": "golden",
     "breed": "Mops",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 46,
@@ -675,9 +585,7 @@
     "color": "gray",
     "breed": "Cane corso",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 47,
@@ -690,9 +598,7 @@
     "color": "black",
     "breed": "Rottweiler",
     "is_sterile": false,
-    "hair": "middle",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "middle"
   },
   {
     "id": 48,
@@ -705,9 +611,7 @@
     "color": "white-brown",
     "breed": "Akita",
     "is_sterile": false,
-    "hair": "long",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "long"
   },
   {
     "id": 49,
@@ -720,9 +624,7 @@
     "color": "brown",
     "breed": "Rhodesian Ridgeback",
     "is_sterile": false,
-    "hair": "short",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "short"
   },
   {
     "id": 50,
@@ -735,8 +637,6 @@
     "color": "black",
     "breed": "Chihuahua",
     "is_sterile": false,
-    "hair": "middle",
-    "createdAt": "2020-03-25T20:35:30.681Z",
-    "updatedAt": "2020-03-25T20:35:30.681Z"
+    "hair": "middle"
   }
 ]
