@@ -1,9 +1,9 @@
 const { Router } = require("express");
-const { pagination } = require("./pagination.controller");
+const paginationController = require("./pagination.controller");
 
 const router = new Router();
 
-router.get("/", pagination.pagination)
 
+router.get("/:id", paginationController.searchAndFilter)
 
 module.exports = router;

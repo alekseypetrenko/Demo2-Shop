@@ -39,6 +39,10 @@ export class AnimalController {
     pagination = (where) => {// page pagination
         const data = this.model.getPaginationData(where);
         this.view.renderAnimals(data);
+
+        // this.model.testPagination(where).then(json => {
+        //     this.view.renderAnimals(json)
+        // })
     }
 
     handleClickDetails = (id) => {// for "Details" btn

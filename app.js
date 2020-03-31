@@ -7,7 +7,7 @@ const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-//var nodeMailer = require('nodemailer');
+//const nodeMailer = require('nodemailer');
 
 app.use("/", express.static(path.join("public")));
 
@@ -17,9 +17,8 @@ app.use("/animals", require("./modules/animals/animals.routes"));
 // Routes for /orders
 app.use('/orders', require('./modules/orders/orders.routes'));
 
-// Test pagination
-// app.use("/next", require("./modules/pagination/pagination.router"));
-// app.use("/prev", require("./modules/pagination/pagination.router"));
+// Routes for /pagination
+app.use("/page", require("./modules/pagination/pagination.router"))
 
 sequelize.sync({ alter: true });
 

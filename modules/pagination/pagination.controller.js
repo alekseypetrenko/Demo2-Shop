@@ -1,47 +1,36 @@
-const animalsModel = require("../animals/animals.model");
 const animalsService = require("../animals/animals.service");
 
-class Paginator {
+const limit = 5 // shows animals on the page by default
 
-    async pagination(req, res, next) {
-        try {           
-            const page = parseInt(req.query.page);
-            const limit = parseInt(req.query.limit);
+class PaginationController {
+   
+    // GET http://localhost:3000/page/2/?&search=beagle&filter=cat
 
-            const startIndex = (page - 1) * limit;
-            const endIndex = page * limit;
+    // async pagination(req, res, next){
+    //     try {
+    //         const offset = (req.params.id - 1) * limit;
 
-            //console.log(req.query);
-            
+    //         const data = await animalsService.paginatedPage(offset, limit)
+    //         res.json(data)
+    //         next()
+    //     } catch (error) {
+    //         next(error)
+    //     }
+    // }
 
-            const results = await animalsService.paginatedPage(page, limit);
-            console.log(results);
-            
+    async searchAndFilter(req, res, next){
+        let {search, filter} = req.query;
 
-            // if (endIndex < data.length) {
-            //     results.next = {
-            //         page: page + 1,
-            //         limit: limit
-            //     }
-            // }
-
-            // if (startIndex > 0) {
-            //     results.prev = {
-            //         page: page - 1,
-            //         limit: limit
-            //     }
-            // }
-            //results.results = data.slice(startIndex, endIndex)
-            res.json(results);
-            next();
+        try {
+            const offset = (req.params.id - 1) * limit;
+            const data = animalsService.searchAndFilter(offset, limit, search, filter)
+            res.json(data);
+            next()
+        } catch (error) {
+            next(error);
         }
-        catch (error) {
-            next(error)
-        }
-
     }
 }
 
-const pagination = new Paginator();
-
-module.exports = pagination;
+const paginationController = new PaginationController();
+module.exports = paginationController;
