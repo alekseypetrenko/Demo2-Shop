@@ -1,7 +1,7 @@
 const animalsService = require("./animals.service.js")
 
 class AnimalsController {
-    async findMany(req, res, next){
+    async findMany(req, res, next) {
         try {
             const animals = await animalsService.findMany();
             res.json(animals);
@@ -10,7 +10,7 @@ class AnimalsController {
         }
     }
 
-    async findOneById(req, res, next){
+    async findOneById(req, res, next) {
         try {
 
             const animal = await animalsService.findOneById(req.params.id);
@@ -19,8 +19,6 @@ class AnimalsController {
             next(e);
         }
     }
-
-    
 }
 
 const animalsController = new AnimalsController();

@@ -3,7 +3,7 @@ const { NotFound } = require('../../common/exeptions/index');
 
 class AnimalsService {
     async findMany() {
-        return animalsModel.findAll();
+        return AnimalsModel.findAll();
     }
 
     async findOneById(id) {

@@ -20,6 +20,9 @@ app.use('/orders', require('./modules/orders/orders.routes'));
 // Routes for /pagination
 app.use("/page", require("./modules/pagination/pagination.router"))
 
+app.use("/send-order")
+
+
 sequelize.sync({ alter: true });
 
 // Start local server
