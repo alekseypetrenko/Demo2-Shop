@@ -16,21 +16,27 @@ class AnimalsService {
         return animal;
     }
 
-    async paginatedPage(offset, limit) {
-        return animalsModel.findAll({ offset, limit });
-    }
+    async searchAndFilter(offset, limit, species, breed, sorted) {
+        let obj = {}
+        if (sorted === undefined) {
+            sorted = "price:desc";
+        }
+        if (species === undefined) {
+            obj = { breed }
+        }
+        if (breed === undefined) {
+            obj = { species }
+        }
+        if (breed === undefined && species === undefined) {
+            obj = {};
+        }
+        let order = sorted.split(":");
 
-    async searchAndFilter(offset, limit, search, filter){
-        return animalsModel.findAndCountAll({
-            where: {
-                //breed: search || "",
-                species: filter || ""
-            },
+        return animalsModel.findAll({
+            where: obj,
+            order: [[order[0], order[1]]],
             offset,
-            limit,
-            //order: [`"${sort.name}", "${sort.direction}"`]
-            //order: [['price', 'DESC']]
-
+            limit
         })
     }
 }

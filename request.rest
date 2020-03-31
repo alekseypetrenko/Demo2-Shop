@@ -1,7 +1,11 @@
-# GEt http://localhost:3000/page/2
-
-# # ###
-# # GET http://localhost:3000/page/2/?search="be"
+###
+GET http://localhost:3000/page/1/?species=Dog&breed=Beagle&sorted=price:desc
 
 ###
-GET http://localhost:3000/page/1/?filter=cat
+GET http://localhost:3000/page/1/?species=Dog&breed=Beagle
+
+###
+GET http://localhost:3000/page/1/?species=Raccoon
+
+###
+GET http://localhost:3000/page/1/?species=Mouse
