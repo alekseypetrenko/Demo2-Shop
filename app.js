@@ -21,7 +21,7 @@ app.use('/orders', require('./modules/orders/orders.routes'));
 // app.use("/next", require("./modules/pagination/pagination.router"));
 // app.use("/prev", require("./modules/pagination/pagination.router"));
 
-//sequelize.sync({ alter: true });
+sequelize.sync({ alter: true });
 
 // Start local server
 const PORT = process.env.PORT || 3000

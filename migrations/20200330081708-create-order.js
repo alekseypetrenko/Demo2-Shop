@@ -5,42 +5,24 @@ module.exports = {
       const transaction = await queryInterface.sequelize.transaction();
           try {
               await queryInterface.createTable("Orders", {
-                  id: {
-                      primaryKey: true,
-                      allowNull: false,
-                      autoIncrement: true,
-                      type: Sequelize.INTEGER
+                id: { 
+                    primaryKey: true, 
+                    autoIncrement: true, 
+                    type: Sequelize.INTEGER },
+                postedDate: { 
+                    allowNull: false, 
+                    type: Sequelize.DATE },
+                customerId: {
+                  type: Sequelize.INTEGER,
+                  references: {
+                    model: {
+                      tableName: 'Customers',
+                      key: 'id',
+                    },
                   },
-
-                  userName: {
-                      allowNull: false,
-                      type: Sequelize.STRING
-                  },
-
-                  userEmail: {
-                      allowNull: false,
-                      type: Sequelize.STRING
-                  },
-
-                  userPhoneNumber: {
-                      allowNull: false,
-                      type: Sequelize.DECIMAL
-                  },
-
-                  productCart: {
-                      allowNull: false,
-                      type: Sequelize.STRING
-                  },
-
-                  totalPrice: {
-                    allowNull: false,
-                    type: Sequelize.DECIMAL
-                  },
-
-                  postedDate: {
-                    allowNull: false,
-                    type: Sequelize.DATE
-                  }
+                  onDelete: 'cascade',
+                  allowNull: false,
+                }
               })
               transaction.commit();
           } catch (error) {

@@ -1,11 +1,12 @@
 const { Router } = require("express");
-const { CreateOrderShema } = require('./orders.shema');
+const { CreateOrderSchema } = require('./orders.schema');
 const ordersController = require('./orders.controller');
 const createValidator = require('../../common/middlewares/create-validator');
 
 const ordersRouter = Router();
 
-ordersRouter.post('/', createValidator(CreateOrderShema), ordersController.createOne.bind(ordersController));
+ordersRouter.get('/', ordersController.findMany);
+ordersRouter.post('/', createValidator(CreateOrderSchema), ordersController.createOne.bind(ordersController));
 
 module.exports = ordersRouter;
 

@@ -8,19 +8,14 @@ class Order extends Model {}
 
 const OrdersModel = Order.init({
     id: {primaryKey: true, autoIncrement: true, type: DataTypes.INTEGER},
-    userName: {allowNull: false , type: DataTypes.STRING},
-    userEmail: {allowNull: false , type: DataTypes.STRING},
-    userPhoneNumber: {allowNull: false , type: DataTypes.DECIMAL},
-    productCart: {allowNull: false , type: DataTypes.STRING},
-    totalPrice: {allowNull: false , type: DataTypes.DECIMAL},
     postedDate: {allowNull: false, type: DataTypes.DATE}
-}, { sequelize});
+}, { sequelize, createdAt: false, updatedAt: false});
 
-OrdersModel.items = OrdersModel.hasMany(OrdersItemModel);
-OrdersModel.customer = OrdersModel.hasOne(CustomersModel, { foreignKey: 'customerId', foreignKeyConstraint: true });
-
-OrdersItemModel.pet = OrdersItemModel.belongsTo(AnimalsModel, { foreignKeyConstraint: true, foreignKey: 'petId', targetKey: 'id' });
-OrdersItemModel.order = OrdersItemModel.belongsTo(OrdersModel, { foreignKeyConstraint: true, foreignKey: 'orderId', targetKey: 'id' });
-
+//one order has many orderitems, orderId in OrderItems Table
+OrdersModel.hasMany(OrdersItemModel, { foreignKey: 'orderId', as: 'items' });
+//one order has only one customer, orderId in Customers Table
+OrdersModel.hasOne(CustomersModel, { foreignKey: 'orderId', foreignKeyConstraint: true, as: 'customer' });
+//many orderitems in animals, animalId in OrderItems Table
+OrdersItemModel.belongsTo(AnimalsModel, { foreignKeyConstraint: true, foreignKey: 'animalId', targetKey: 'id' });
 
 module.exports = OrdersModel;
