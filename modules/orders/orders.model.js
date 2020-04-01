@@ -17,7 +17,7 @@ OrdersModel.hasMany(OrdersItemModel, { foreignKey: 'orderId', as: 'items' });
 //one order has only one customer, orderId in Customers Table
 OrdersModel.hasOne(CustomersModel, { foreignKey: 'orderId', foreignKeyConstraint: true, as: 'customer' });
 
-//many orderitems in animals, animalId in OrderItems Table
+//one to one, animalId in OrdersItems table
 OrdersItemModel.belongsTo(AnimalsModel, { foreignKeyConstraint: true, foreignKey: 'animalId', targetKey: 'id' });
 
 module.exports = OrdersModel;
