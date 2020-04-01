@@ -27,14 +27,20 @@ export class OrderController {
 
     handleOrderInfo = () => {//save order info into localStorage
         this.closeModal();
-        const data = {
-            name: this.view.inputsValue[0].value,
-            email: this.view.inputsValue[1].value,
-            phone: this.view.inputsValue[2].value,
-            products: this.cartInfo.products,
-            totalPrice: this.cartInfo.totalPrice
+        let data = {
+            customer: {
+                name: this.view.inputsValue[0].value,
+                email: this.view.inputsValue[1].value,
+                phone: this.view.inputsValue[2].value,
+            },
+            products: this.cartInfo.products.map(el => el.id),
+            ///totalPrice: this.cartInfo.totalPrice
         }
+        console.log(data);
+
         this.model.saveOrder(data);
+
+        this.model.sendEmail(data);
         this.notify('clear-cart', null);//notify CartController about changes
     }
 

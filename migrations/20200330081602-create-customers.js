@@ -4,25 +4,23 @@ module.exports = {
 	up: async (queryInterface, Sequelize) => {
 		const transaction = await queryInterface.sequelize.transaction();
 		try {
-			await queryInterface.createTable("OrdersItems", {
-				animalId: {
-					type: Sequelize.INTEGER,
-					references: {
-						model: {
-							tableName: 'Animals',
-							key: 'id',
-						},
-					},
+			await queryInterface.createTable("Customers", {
+				id: {
+					primaryKey: true,
+					autoIncrement: true,
+					allowNull: false,
+					type: Sequelize.INTEGER
+				},
+				name: {
+					type: Sequelize.STRING,
 					allowNull: false
 				},
-				orderId: {
-					type: Sequelize.INTEGER,
-					references: {
-						model: {
-							tableName: 'Orders',
-							key: 'id',
-						},
-					},
+				email: {
+					type: Sequelize.STRING,
+					allowNull: false
+				},
+				phone: {
+					type: Sequelize.STRING,
 					allowNull: false
 				},
 			})
@@ -35,9 +33,11 @@ module.exports = {
 	down: async (queryInterface, Sequelize) => {
 		const transaction = await queryInterface.sequelize.transaction();
 		try {
-			await queryInterface.dropTable("OrdersItems");
+			await queryInterface.dropTable("Customers");
 		} catch (error) {
 			transaction.rollback();
 		}
 	}
 };
+
+

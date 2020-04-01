@@ -1,14 +1,14 @@
-const { Model, DataTypes } = require('sequelize'); 
+const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../../db');
 
-class Customer extends Model {}
+class Customer extends Model { }
 
 const CustomersModel = Customer.init({
-    id: {primaryKey: true, autoIncrement: true, type: DataTypes.INTEGER},
-    userName: {allowNull: false , type: DataTypes.STRING},
-    userEmail: {allowNull: false , type: DataTypes.STRING},
-    userPhoneNumber: {allowNull: false , type: DataTypes.STRING},
+    id: { primaryKey: true, autoIncrement: true, type: DataTypes.INTEGER },
+    name: { allowNull: false, type: DataTypes.STRING },
+    email: { allowNull: false, type: DataTypes.STRING },
+    phone: { allowNull: false, type: DataTypes.STRING },
     orderId: { type: DataTypes.INTEGER, allowNull: false },
-}, { sequelize});
+}, { sequelize, createdAt: false, updatedAt: false });
 
 module.exports = CustomersModel;

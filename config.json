@@ -1,14 +1,18 @@
 {
-    "db": {
-      "name": "animals",
-      "user": "postgres",
-      "password": "postgres",
-      "host": "127.0.0.1",
-      "port": 5432,
-      "dialect": "postgres"
-    },
-    "auth": {
-      "secretOrKey": "some-secret",
-      "expiresIn": 360000
-    }
-  }
+	"db": {
+		"name": "animals",
+		"user": "postgres",
+		"password": "postgres",
+		"host": "127.0.0.1",
+		"port": 5432,
+		"dialect": "postgres"
+	},
+	"auth": {
+		"secretOrKey": "some-secret",
+		"expiresIn": 360000
+	},
+	"telegram": {
+		"token": "1299960913:AAE-QPZrvPlQcr-eH_xf7RZtvX1Y9ZnyIzA",
+		"chat": "280974652"
+	}
+}

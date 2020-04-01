@@ -1,5 +1,5 @@
 ###
-GET http://localhost:3000/page/1/?species=Dog&breed=Beagle&sorted=price:desc
+GET http://localhost:3000/page/2/?species=Dog&breed=Beagle&sorted=price:desc
 
 ###
 GET http://localhost:3000/page/1/?species=Dog&breed=Beagle
@@ -9,3 +9,6 @@ GET http://localhost:3000/page/1/?species=Raccoon
 
 ###
 GET http://localhost:3000/page/1/?species=Mouse
+
+###
+POST http://localhost:3000/sendorder

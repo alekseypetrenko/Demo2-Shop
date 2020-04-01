@@ -1,4 +1,5 @@
 const ordersService = require("./orders.service");
+const senderController = require("../sendingOrder/sender.controller")
 
 
 class OrdersController {
@@ -11,10 +12,16 @@ class OrdersController {
             next(e);
         }
     }
-    
+
     async createOne(req, res, next) {
         try {
             const order = await ordersService.createOne(req.body);
+            const msgData = await ordersService.findOne(order.id)
+            try {
+                senderController.sendEmailMy(msgData)
+            } catch (error) {
+                console.log(error);
+            }
             res.send(order);
         } catch (e) {
             next(e);

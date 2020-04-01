@@ -2,8 +2,8 @@ const AnimalsModel = require("./animals.model");
 const { NotFound } = require('../../common/exeptions/index');
 
 class AnimalsService {
-    async findMany() {
-        return AnimalsModel.findAll();
+    async findMany(query) {
+        return AnimalsModel.findAll(query);
     }
 
     async findOneById(id) {
@@ -36,7 +36,7 @@ class AnimalsService {
         }
         let order = sorted.split(":");
 
-        return animalsModel.findAll({
+        return AnimalsModel.findAll({
             where: obj,
             order: [[order[0], order[1]]],
             offset,
