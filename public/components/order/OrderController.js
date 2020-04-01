@@ -42,6 +42,7 @@ export class OrderController {
 
         this.model.sendEmail(data);
         this.notify('clear-cart', null);//notify CartController about changes
+        this.notify('order-history', data);//notify OrderHistoryController about changes
     }
 
     handleCartInfo = (cart) => {
