@@ -39,9 +39,9 @@ export class OrderHistoryView {
         const element = document.createElement('tr');
         element.innerHTML = `
             <td class="w-50"> 
-                <span>Name:</span> ${el.name}<br>
-                <span>Email:</span> ${el.email}<br>
-                <span>Phone:</span>${el.phone}<br>
+                <span>Name:</span> ${el.customer.name}<br>
+                <span>Email:</span> ${el.customer.email}<br>
+                <span>Phone:</span>${el.customer.phone}<br>
             </td>
             <td class="w-50"> 
                 <span>Breed:</span> ${el.products.map(el => el.breed)}<br>

@@ -45,8 +45,10 @@ class OrdersService {
 
         return sequelize.transaction(async transaction => {
             const { products } = orderData;
+            console.log(products);
+
             const foundAnimals = await animalsService.findMany({
-                where: { id: { [Op.in]: products } },
+                where: { id: { [Op.in]: products.map(el => el.id) } },
                 attributes: ['id'],
                 transaction,
             });
