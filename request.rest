@@ -1,5 +1,5 @@
 ###
-GET http://localhost:3000/page/2/?species=Dog&breed=Beagle&sorted=price:desc
+GET http://localhost:3000/page/3/?species=Dog&breed=Beagle&sorted=price:desc
 
 ###
 GET http://localhost:3000/page/1/?species=Dog&breed=Beagle

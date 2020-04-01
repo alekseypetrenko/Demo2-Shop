@@ -10,8 +10,13 @@ export class OrderModel {
 
     validate(input) {
         input.map(el => {
-            // Доделать
-            return this.regex[el.name].test(el.value) ? el.classList.add('valid') : el.classList.add('invalid');
+            if (this.regex[el.name].test(el.value)) {
+                el.classList.add('valid')
+                el.classList.remove('invalid')
+            } else {
+                el.classList.add('invalid')
+                el.classList.remove('valid')
+            }
         })
     }
 

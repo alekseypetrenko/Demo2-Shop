@@ -105,6 +105,40 @@ li.page-item {
     
 }
 
+/* Style for orderHistory  */
+.order-history:hover {
+    cursor: pointer;
+}
+
+.order-history-icon {
+    color: white;
+    font-size: 33px;
+}
+
+.order-history-container {
+    margin-left: 25px;
+    position: relative;
+    transition: all .2s ease-in-out;
+}
+
+.order-history-container:hover { 
+    
+    transform: scale(1.15);
+}
+
+.order-history-counter {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    background:#04B45F;
+    text-align:center;
+    border-radius:50%;
+    
+}
+
 .list-main-render:first-of-type {
     font-weight: bold;
     font-size: 20px;
@@ -142,4 +176,12 @@ li.page-item {
 
 .modal-dialog {
     width: 100% !important;
+}
+
+.table-body-orderHistory span {
+    font-weight: bold;
+}
+
+.input-group-text {
+    width: 70px;
 }

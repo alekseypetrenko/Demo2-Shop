@@ -15,7 +15,7 @@ class SendEmail {
                 3. Products
         `
 
-        http.post(`https://api.telegram.org/bot${telegram.token}/sendMessage?chat_id=${telegram.chat}&parse_mode=markdown&text=asd`, (err, res, body) => {
+        http.post(`https://api.telegram.org/bot${telegram.token}/sendMessage?chat_id=${telegram.chat}&parse_mode=markdown&text=${message}`, (err, res, body) => {
             if (err) {
                 return err;
             }
