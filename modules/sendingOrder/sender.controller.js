@@ -9,7 +9,6 @@ class SendEmail {
 
         let message = `
             **You are recieved a new order**
-
                 1. Price
                 2. Phone
                 3. Products
