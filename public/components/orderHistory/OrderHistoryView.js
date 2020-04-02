@@ -37,6 +37,7 @@ export class OrderHistoryView {
 
     renderSingleOrder(el) {// render 1 order in orderHistory
         const element = document.createElement('tr');
+        const breed = el.products.map(el => el.breed);
         element.innerHTML = `
             <td class="w-50"> 
                 <span>Name:</span> ${el.customer.name}<br>
@@ -44,7 +45,7 @@ export class OrderHistoryView {
                 <span>Phone:</span>${el.customer.phone}<br>
             </td>
             <td class="w-50"> 
-                <span>Breed:</span> ${el.products.map(el => el.breed)}<br>
+                <span>${breed.length > 1 ? "Breeds:" : "Breed"} </span>${breed}<br>
                 <span>Price:</span>${el.totalPrice}
             </td>
             <td>

@@ -6,6 +6,7 @@ const createValidator = require('../../common/middlewares/create-validator');
 const ordersRouter = Router();
 
 ordersRouter.get('/', ordersController.findMany);
+ordersRouter.get('/history', ordersController.getOrdersHistory);
 ordersRouter.post('/', createValidator(CreateOrderSchema), ordersController.createOne.bind(ordersController));
 
 module.exports = ordersRouter;

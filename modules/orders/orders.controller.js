@@ -28,6 +28,23 @@ class OrdersController {
         }
     }
 
+    async getOrdersHistory(req, res, next) {
+        try {
+            const { email, phone } = req.query;
+
+            if (email) {
+                const history = await ordersService.findOrderBy({ email });
+                res.send(history)
+            }
+            if (phone) {
+                const history = await ordersService.findOrderBy({ phone });
+                res.send(history)
+            }
+        } catch (error) {
+            next(error)
+        }
+    }
+
 }
 
 module.exports = new OrdersController();
