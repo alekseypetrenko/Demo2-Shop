@@ -6,7 +6,7 @@ import { PaginationController } from "./components/pagination/PaginationControll
 import { DetailsController } from "./components/details/DetailsController.js";
 import { CartController } from "./components/shoppingCart/CartController.js";
 import { OrderController } from "./components/order/OrderController.js"
-import { OrderHistoryController } from "./components/OrderHistory/OrderHistoryController.js";
+import { OrderHistoryController } from "./components/orderHistory/OrderHistoryController.js";
 
 
 const publisher = new Publisher();
