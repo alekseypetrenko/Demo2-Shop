@@ -33,7 +33,6 @@ export class OrderController {
                 email: this.view.inputsValue[1].value,
                 phone: this.view.inputsValue[2].value,
             },
-            //products: this.cartInfo.products.map(el => el.id),
             products: this.cartInfo.products,
             totalPrice: this.cartInfo.totalPrice
         }

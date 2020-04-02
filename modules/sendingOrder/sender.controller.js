@@ -5,13 +5,18 @@ class SendEmail {
 
     async sendEmailMy(data) {
 
-        console.log(data[0].items);
+        let customer = data[0].customer;
+        console.log(customer);
+
+        let items = data[0].items[0]
+        console.log(items);
 
         let message = `
             **You are recieved a new order**
-                1. Price
-                2. Phone
+                1. Phone
+                2. Name
                 3. Products
+                4. Price
         `
 
         http.post(`https://api.telegram.org/bot${telegram.token}/sendMessage?chat_id=${telegram.chat}&parse_mode=markdown&text=${message}`, (err, res, body) => {
