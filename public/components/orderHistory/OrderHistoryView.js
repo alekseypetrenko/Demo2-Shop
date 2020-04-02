@@ -55,7 +55,7 @@ export class OrderHistoryView {
 
         element.querySelector(".btn-delete-order").addEventListener("click", ev => {
             ev.preventDefault();
-            this.deleteOrderListener(el.name);
+            this.deleteOrderListener(el.customer.name);
         });
 
         return element;

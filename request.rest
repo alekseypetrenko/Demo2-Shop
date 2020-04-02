@@ -14,5 +14,10 @@ GET http://localhost:3000/page/1/?species=Mouse
 GET http://localhost:3000/sendorder/history?email=apetrenko.job@gmail.com
 
 ###
+GET http://localhost:3000/sendorder/history?email=opetr@softserveinc.com
+
+###
 GET http://localhost:3000/sendorder/history?phone=%2B380665781101
 
+###
+GET http://localhost:3000/sendorder/history?phone=%2B380501234567
