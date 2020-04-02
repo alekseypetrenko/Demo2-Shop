@@ -12,7 +12,7 @@ export class OrderHistoryModel {
     }
 
     removeFromOrderHistory(name) {// remove 1 order from orderHistory
-        this.orderHistory = this.orderHistory.filter(el => el.name !== name);
+        this.orderHistory = this.orderHistory.filter(el => el.customer.name !== name);
         localStorage.setItem('order', JSON.stringify(this.orderHistory));
         return this.orderHistory;
     }
