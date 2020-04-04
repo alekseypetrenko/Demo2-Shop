@@ -12,8 +12,7 @@ class PaginationController {
 
             const data = await animalsService.searchAndFilter(offset, limit, species, breed, sorted);
 
-            res.json(data);
-            next();
+            res.send(data);
         } catch (error) {
             next(error);
         }

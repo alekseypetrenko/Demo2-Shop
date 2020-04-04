@@ -12,8 +12,9 @@ class SendEmail {
         console.log(items);
 
         let message = `
-            **You are recieved a new order**
-                1. Phone
+            ${JSON.stringify(customer)}
+            **You arstre recieved a new order**
+                1. <p>Phone
                 2. Name
                 3. Products
                 4. Price

@@ -13,9 +13,6 @@ app.use("/", express.static(path.join("public")));
 // Routes for /animals
 app.use("/animals", require("./modules/animals/animals.routes"));
 
-// Routes for /orders
-app.use('/orders', require('./modules/orders/orders.routes'));
-
 // Routes for /pagination
 app.use("/page", require("./modules/pagination/pagination.router"))
 

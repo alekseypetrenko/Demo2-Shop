@@ -80,6 +80,7 @@ class OrdersService {
             order.postedDate = new Date();
             const savedOrder = await order.save({ transaction });
             orderData.customer.orderId = savedOrder.id;
+            
             await customersService.createOne(orderData.customer, transaction);
             const orderItems = products.map(item => ({ orderId: savedOrder.id, animalId: item.id }));//
             const savedOrderItems = await OrdersItemModel.bulkCreate(orderItems, { transaction });
